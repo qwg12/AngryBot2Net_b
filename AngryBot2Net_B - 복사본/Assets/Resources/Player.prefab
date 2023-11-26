@@ -109,8 +109,8 @@ GameObject:
   - component: {fileID: 2827298604674699885}
   - component: {fileID: 4140899345176208978}
   - component: {fileID: 1456903393193777595}
-  - component: {fileID: 5036484683351809146}
   - component: {fileID: 4058432973685016697}
+  - component: {fileID: -8775145494892379810}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -197,6 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c22441da0c8860c4eac368d209a9207a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damping: 10
   moveSpeed: 10
 --- !u!114 &1456903393193777595
 MonoBehaviour:
@@ -213,31 +214,15 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   Group: 0
   prefixField: -1
-  Synchronization: 3
+  Synchronization: 0
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
-  - {fileID: 5036484683351809146}
+  - {fileID: 4140899345176208978}
   - {fileID: 4058432973685016697}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &5036484683351809146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 733213674607187262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
 --- !u!114 &4058432973685016697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,6 +256,20 @@ MonoBehaviour:
   m_SynchronizeLayers:
   - SynchronizeType: 1
     LayerIndex: 0
+--- !u!114 &-8775145494892379810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733213674607187262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df90da922df458a4186bbb13bbe15dd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePos: {fileID: 4308693928138085810}
+  bulletPrefab: {fileID: 8222332823237018225, guid: bbfb9a20b68ab4c3f830a9872b675b34, type: 3}
 --- !u!1 &872131150356074829
 GameObject:
   m_ObjectHideFlags: 0
