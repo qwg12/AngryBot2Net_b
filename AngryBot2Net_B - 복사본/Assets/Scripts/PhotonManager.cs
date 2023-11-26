@@ -8,7 +8,7 @@ public class PhotonManager : MonoBehaviourPunCallbacks
     // 게임의 버전
     private readonly string version = "1.0";
     // 유저의 닉네임
-    private string userId = "Zack";
+    private string userId = "pjh";
     void Awake()
     {
         // 마스터 클라이언트의 씬 자동 동기화 옵션
@@ -22,6 +22,13 @@ public class PhotonManager : MonoBehaviourPunCallbacks
         PhotonNetwork.ConnectUsingSettings();
     }
 
+    // 포톤 서버에 접속 후 호출되는 콜백 함수
+    public override void OnConnectedToMaster()
+    {
+        Debug.Log("Connected to Master!");
+        Debug.Log($"PhotonNetwork.InLobby = {PhotonNetwork.InLobby}");
+        PhotonNetwork.JoinLobby();
+    }
     // 로비에 접속 후 호출되는 콜백 함수
     public override void OnJoinedLobby()
     {
@@ -51,5 +58,10 @@ public class PhotonManager : MonoBehaviourPunCallbacks
     {
         Debug.Log($"PhotonNetwork.InRoom = {PhotonNetwork.InRoom}");
         Debug.Log($"Player Count = {PhotonNetwork.CurrentRoom.PlayerCount}");
+
+        foreach (var player in PhotonNetwork.CurrentRoom.Players)
+        {
+            Debug.Log($"{player.Value.NickName} , {player.Value.ActorNumber}");
+        }
     }
 }
