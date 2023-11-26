@@ -36,6 +36,5 @@ public class Fire : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab,
         firePos.position,
         firePos.rotation);
-
     }
 }

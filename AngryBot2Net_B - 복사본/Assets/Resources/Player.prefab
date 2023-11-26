@@ -197,8 +197,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c22441da0c8860c4eac368d209a9207a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damping: 10
   moveSpeed: 10
+  damping: 10
 --- !u!114 &1456903393193777595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,7 +214,7 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   Group: 0
   prefixField: -1
-  Synchronization: 0
+  Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
